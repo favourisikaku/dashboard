@@ -50,7 +50,10 @@ h6 {
   position: relative;
   overflow: hidden;
 }
-
+.logo-size {
+  width: 80px; /* Adjust as needed */
+  height: auto;
+}
 .pb-custom-1 {
   padding-bottom: 8px;
 }
@@ -413,19 +416,19 @@ h6 {
   background-color: #eefcfd;
 }
 
-.sidebar-list .nav-active {
-  border-left: 4px solid var(--primary);
-  background-color: white !important;
-  color: var(--primary) !important;
+/* .sidebar-list .nav-active {
+  border: 0px solid var(--primary);
+  background-color: #0179fe !important;
+  color: #ffffff;
   font-weight: 700;
-}
+} */
 
-.sidebar-list-2 .nav-active {
+/* .sidebar-list-2 .nav-active {
   border-left: 4px solid var(--tertiary);
   background-color: white !important;
   color: var(--dark) !important;
   font-weight: 700;
-}
+} */
 
 .dropdown-heading {
   font-size: 1.125rem;

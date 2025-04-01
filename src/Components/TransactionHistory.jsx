@@ -7,11 +7,11 @@ const TransactionHistory = () => {
   return (
     <>
       <main
-        className="d-flex  justify content-space between"
+        className="d-flex  justify-content-between"
         // className="container-fluid"
       >
         <SidebarLeft />
-        <div>
+        <div className=" flex-grow-1 px-5">
           <section className="py-5 ">
             <h2 style={{ fontWeight: "600" }}>Transaction History</h2>
             <h5>Gain Insights and Track Your Transactions Over Time</h5>
@@ -50,7 +50,7 @@ const TransactionHistory = () => {
             </div>
           </section>
           <div className="table-responsive">
-            <table class="table ">
+            <table className="table ">
               <thead>
                 <tr className="table table-light">
                   <th scope="col">Transaction</th>
@@ -89,7 +89,7 @@ const TransactionHistory = () => {
                     <img src="images/Badge2.svg" />
                   </td>
                 </tr>
-                <tr class="table-success">
+                <tr className="table-success">
                   {/* <th scope="row">1</th> */}
                   <td>Alex John</td>
                   <td className="text-success">+ &#8358;420,000</td>
@@ -117,7 +117,7 @@ const TransactionHistory = () => {
                     <img src="images/Badge4.svg" />
                   </td>
                 </tr>
-                <tr class="table-danger ">
+                <tr className="table-danger ">
                   {/* <th scope="row">1</th> */}
                   <td>philip Andrew</td>
                   <td className="text-danger">- &#8358;4,000</td>
@@ -136,7 +136,7 @@ const TransactionHistory = () => {
           </div>
         </div>
 
-        {/* <SidebarRight /> */}
+        <SidebarRight />
       </main>
     </>
   );

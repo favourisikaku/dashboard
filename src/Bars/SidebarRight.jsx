@@ -9,41 +9,95 @@ const SidebarRight = () => {
 
   return (
     <nav
-      className="flex-none navbar navbar-vertical navbar-expand-lg show vh-lg-100 bg-white px-0 py-2 navbar-dark"
+      className="flex-none navbar navbar-vertical navbar-expand-lg show vh-lg-100 bg-white px-0 py-2 navbar-dark px-4"
       id="sidebar"
+      style={{
+        width: "350px",
+        minWidth: "350px",
+        borderLeft: "1px solid #E0E0E0",
+        borderRight: "1px solid #E0E0E0",
+      }}
     >
-      <div className="flex-lg-column align-items-lg-start d-flex align-items-center justify-content-between w-100"></div>
+      <div className="flex-lg-column align-items-lg-start d-flex align-items-center justify-content-between w-100 py-3"></div>
       <div className="avatar-circle rounded-circle flex-shrink-0 me-2 cursor-pointer m-0">
-        <img className="rounded-circle img-fluid" src="/images/profile.png" />
+        <img
+          className="rounded-circle img-fluid"
+          src="/images/profile.png"
+          style={{ width: "90px", height: "90px" }}
+        />
       </div>
-      <section>
-        <h2>Favour Isikaku</h2> <p>isikakufavour@yahoo.com</p>
+
+      <section className="pt-4">
+        <h2>Favour Isikaku</h2>{" "}
+        <p style={{ fontSize: "14px" }}>isikakufavour@yahoo.com</p>
       </section>
 
       <section>
         <div>
-          <h6
-          // style={{ color: "#1570EF" }}
+          <h5
+            // style={{ color: "#1570EF" }}
+            style={{ fontWeight: "600" }}
+            className="py-3"
           >
             My Bank
-          </h6>
+          </h5>
           <div
-            className="border border-0 rounded-4 py-3 px-4 "
-            style={{ backgroundColor: "#1570EF" }}
+            className="border border-0 rounded-4 py-4 px-4 shadow d-flex"
+            style={{
+              backgroundColor: "#4893FF",
+              maxWidth: "400px",
+              minHeight: "160px",
+              margin: "auto",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
           >
-            <div>
-              <p
-              // style={{ color: "white" }}
+            <div className="mb-2">
+              <h5
+                style={{
+                  color: "white",
+                  fontWeight: "600",
+                  marginBottom: "8px",
+                }}
               >
                 Access
-              </p>
+              </h5>
             </div>
-            <div>
+            <div className="d-flex justify-content-between align-items-center">
               <div>
-                <p>Favour Isikaku</p> <p>07/26</p>
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                  <span style={{ color: "white", fontSize: "14px" }}>
+                    Favour Isikaku
+                  </span>
+                  <span
+                    style={{
+                      color: "white",
+                      fontSize: "14px",
+                      marginLeft: "12px",
+                    }}
+                  >
+                    07/26
+                  </span>
+                </div>
+
+                <span
+                  style={{
+                    color: "white",
+                    fontSize: "16px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  1234 1234 1234 1234
+                </span>
               </div>
+
               <div>
-                <p>1234 1234 1234 1234</p>
+                <img
+                  className="rounded-circle img-fluid border-0 p-2 me-2"
+                  src="/images/Mastercard.svg"
+                  alt="Mastercard"
+                  style={{ width: "40px", height: "40px" }}
+                />
               </div>
             </div>
           </div>
@@ -51,7 +105,9 @@ const SidebarRight = () => {
       </section>
 
       <section>
-        <h5 style={{ fontWeight: "600" }}>My budgets</h5>
+        <h5 style={{ fontWeight: "600" }} className="pt-4">
+          My budgets
+        </h5>
         <div
           className="border border-0 rounded-4 p-3"
           style={{ backgroundColor: "#F5FAFF" }}

@@ -9,8 +9,11 @@ const SidebarLeft = () => {
 
   return (
     <nav
-      className="flex-none navbar navbar-vertical navbar-expand-lg show vh-lg-100 bg-white px-0 py-2 navbar-dark"
+      className="flex-none navbar navbar-vertical navbar-expand-lg show vh-lg-100 bg-white px-0 py-2 navbar-dark px-1"
       id="sidebar"
+      style={{
+        borderRight: "1px solid #E0E0E0", // Light gray border on the right
+      }}
     >
       <div className="flex-lg-column align-items-lg-start d-flex align-items-center justify-content-between w-100">
         <button
@@ -24,9 +27,9 @@ const SidebarLeft = () => {
           <i className="bi bi-list bi-2 text-dark cursor-pointer"></i>
         </button>
 
-        <Link className="navbar-brand me-0 ps-lg-4 text-bold" to="/dashboard">
+        <Link className="navbar-brand me-0 ps-lg-4 text-bold ms-5" to="/">
           <img
-            src="/images/fot-logo.svg"
+            src="/images/logo.jpg"
             className="img-fluid logo-size"
             alt="logo"
           />
@@ -43,7 +46,7 @@ const SidebarLeft = () => {
           >
             <div className="avatar-sm rounded-circle me-2">
               <img
-                src="/images/download.png"
+                src="/images/logo.jpg"
                 className="img-fluid object-fit-cover object-position-center w-100 h-100"
               />
             </div>
@@ -58,26 +61,12 @@ const SidebarLeft = () => {
             aria-labelledby="navbarDropdown"
           >
             <li>
-              <Link
-                className="dropdown-item pt-custom-1 pb-custom-1"
-                to="/client-administrator/account-details"
-              >
-                My Profile
-              </Link>
+              <Link className="dropdown-item pt-custom-1 pb-custom-1"></Link>
             </li>
             <li>
-              <Link
-                className="dropdown-item pt-custom-1 pb-custom-1"
-                to="/client-administrator/account-management"
-              >
-                Account Settings
-              </Link>
+              <Link className="dropdown-item pt-custom-1 pb-custom-1"></Link>
             </li>
-            <li>
-              <a className="dropdown-item pt-custom-1 pb-custom-1" href="#">
-                Log out
-              </a>
-            </li>
+            <li></li>
           </ul>
         </div>
 
@@ -89,15 +78,8 @@ const SidebarLeft = () => {
         >
           <div className="offcanvas-header justify-content-between align-items-center">
             <div className="offcanvas-title">
-              <Link
-                className="navbar-brand me-0 text-bold"
-                to="/client-administrator/dashboard"
-              >
-                <img
-                  src="/images/fot-logo.svg"
-                  className="img-fluid"
-                  alt="Logo"
-                />
+              <Link className="navbar-brand me-0 text-bold" to="/">
+                <img src="/images/logo.jpg" className="img-fluid" alt="Logo" />
               </Link>
             </div>
 
@@ -110,29 +92,54 @@ const SidebarLeft = () => {
 
           <div className="offcanvas-body flex-column custom-offcanvas-h">
             <ul className="navbar-nav flex-column sidebar-list my-4">
-              <li className="nav-item">
+              <li className="nav-item mb-4">
                 <Link
-                  className={`nav-link  ${
-                    pathname === "/" ? "nav-active" : ""
-                  }`}
-                  aria-current="page"
+                  className={`nav-link ${pathname === "/" ? "nav-active" : ""}`}
                   to="/"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    color: pathname === "/" ? "white" : "#344054",
+                    backgroundColor:
+                      pathname === "/" ? "#0179FE" : "transparent",
+                    borderRadius: "8px",
+                    padding: "20px 7px",
+                    fontWeight: "600",
+                  }}
                 >
-                  {" "}
-                  <img src="/images/home-2.svg" className="img-fluid" /> Home
+                  <img
+                    src="/images/home-2.svg"
+                    className="img-fluid"
+                    alt="Home"
+                  />{" "}
+                  Home
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link
-                  className={`nav-link  ${
-                    pathname === "/" ? "nav-active" : ""
+                  className={`nav-link ${
+                    pathname === "/transactions" ? "nav-active" : ""
                   }`}
-                  aria-current="page"
-                  to="/"
+                  to="/transactions"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    color: pathname === "/transactions" ? "white" : "#344054",
+                    backgroundColor:
+                      pathname === "/transactions" ? "#0179FE" : "transparent",
+                    borderRadius: "8px",
+                    padding: "20px 7px",
+                    fontWeight: "600",
+                  }}
                 >
-                  {" "}
-                  <img src="/images/Vector.svg" className="img-fluid" />{" "}
+                  <img
+                    src="/images/Vector.svg"
+                    className="img-fluid"
+                    alt="Transaction"
+                  />{" "}
                   Transaction History
                 </Link>
               </li>
