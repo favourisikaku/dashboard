@@ -3,17 +3,20 @@ import SidebarLeft from "../Bars/SidebarLeft";
 import SidebarRight from "../Bars/SidebarRight";
 import NavBar from "../Bars/NavBar";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../Context/AppContext";
 
 const Index = () => {
+  const { toggleSideBar, SideBarVisibility } = useContext(AppContext);
   return (
     <>
       <div className="main-admin-container">
         <main
           className="d-flex flex-column flex-lg-row " // className="container-fluid"
         >
-          <SidebarLeft />
+          {toggleSideBar && <SidebarLeft />}
           <div className="flex-lg-fill overflow-auto vstack vh-lg-100 position-relative bg-color-4">
-            <NavBar />
+            <NavBar SideBarVisibility={SideBarVisibility} />
             <div className=" flex-grow-1 px-5">
               <section className="py-5">
                 <h2 className="fw-semibold">

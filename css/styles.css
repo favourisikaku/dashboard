@@ -1717,6 +1717,10 @@ input:checked + .slider:before {
     font-weight: 700;
   }
 
+  .aaaa img {
+    width: 40px;
+  }
+
   .activated-options img {
     height: 25px;
   }

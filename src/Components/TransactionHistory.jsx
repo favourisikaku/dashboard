@@ -3,8 +3,11 @@ import SidebarLeft from "../Bars/SidebarLeft";
 import SidebarRight from "../Bars/SidebarRight";
 import { Link } from "react-router-dom";
 import NavBar from "../Bars/NavBar";
-
+import { useContext } from "react";
+import { AppContext } from "../Context/AppContext";
 const TransactionHistory = () => {
+  const { toggleSideBar, SideBarVisibility } = useContext(AppContext);
+
   return (
     <>
       <div className="main-admin-container">
@@ -12,9 +15,9 @@ const TransactionHistory = () => {
           className="d-flex flex-column flex-lg-row "
           // className="container-fluid"
         >
-          <SidebarLeft />
+          {toggleSideBar && <SidebarLeft />}
           <div className="flex-lg-fill overflow-auto vstack vh-lg-100 position-relative bg-color-4">
-            <NavBar />
+            <NavBar SideBarVisibility={SideBarVisibility} />
             <div className=" flex-grow-1 px-5">
               <section className="py-5 ">
                 <h2 style={{ fontWeight: "600" }}>Transaction History</h2>

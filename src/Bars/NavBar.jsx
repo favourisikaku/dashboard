@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ SideBarVisibility }) => {
   return (
     <>
       <div className="bg-white d-lg-block d-none py-2">
         <div className="container d-flex align-items-center justify-content-between lms-heading-title">
           <div className="d-flex align-items-center">
-            <i className="bi bi-list bi-2 text-dark cursor-pointer arrow-box cursor-pointer toggle-side"></i>
+            <i
+              className="bi bi-list bi-2 text-dark cursor-pointer arrow-box cursor-pointer toggle-side"
+              onClick={SideBarVisibility}
+            ></i>
 
             {/* <div className="input-group border-custom rounded">
               <span

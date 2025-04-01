@@ -12,7 +12,6 @@ export const UserContext = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        baseUrl,
         toggleSideBar,
         SideBarVisibility,
       }}

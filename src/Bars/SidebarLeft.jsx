@@ -27,7 +27,7 @@ const SidebarLeft = () => {
           <i className="bi bi-list bi-2 text-dark cursor-pointer"></i>
         </button>
 
-        <Link className="navbar-brand me-0 ps-lg-4 text-bold ms-5" to="/">
+        <Link className="navbar-brand me-0 ps-lg-4 text-bold ms-5 aaaa" to="/">
           <img
             src="/images/logo.jpg"
             className="img-fluid logo-size"
@@ -35,7 +35,7 @@ const SidebarLeft = () => {
           />
         </Link>
 
-        <div className="navbar-user d-lg-none">
+        {/* <div className="navbar-user d-lg-none">
           <a
             className="nav-link no-caret d-flex align-items-center no-caret dropdown-toggle"
             href="#"
@@ -68,7 +68,7 @@ const SidebarLeft = () => {
             </li>
             <li></li>
           </ul>
-        </div>
+        </div> */}
 
         <div
           className="offcanvas offcanvas-end bg-main-secondary"
