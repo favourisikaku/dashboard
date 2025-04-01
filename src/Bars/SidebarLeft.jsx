@@ -12,7 +12,7 @@ const SidebarLeft = () => {
       className="flex-none navbar navbar-vertical navbar-expand-lg show vh-lg-100 bg-white px-0 py-2 navbar-dark px-1"
       id="sidebar"
       style={{
-        borderRight: "1px solid #E0E0E0", // Light gray border on the right
+        borderRight: "1px solid #E0E0E0",
       }}
     >
       <div className="flex-lg-column align-items-lg-start d-flex align-items-center justify-content-between w-100">
@@ -77,9 +77,13 @@ const SidebarLeft = () => {
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header justify-content-between align-items-center">
-            <div className="offcanvas-title">
-              <Link className="navbar-brand me-0 text-bold" to="/">
-                <img src="/images/logo.jpg" className="img-fluid" alt="Logo" />
+            <div className="offcanvas-title d-flex">
+              <Link className="navbar-brand me-0 text-bold ms-5 pt-4" to="/">
+                <img
+                  src="/images/logo.jpg"
+                  className="img-fluid logo-size"
+                  alt="Logo"
+                />
               </Link>
             </div>
 
